@@ -4,6 +4,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  HashRouter,
 } from "react-router-dom";
 import SingleMovie from './SingleMovie';
 import Error from './Error';
@@ -12,13 +13,13 @@ import "./App.css";
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
       <Routes>
-        <Route path="/your-movie" element={<Home />} />
-        <Route path="your-movie/movie/:id" element={<SingleMovie />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<SingleMovie />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
