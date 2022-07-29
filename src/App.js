@@ -14,8 +14,8 @@ const App = () => {
     <div>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="movie/:id" element={<SingleMovie />} />
+        <Route path="/your-movie" element={<Home />} />
+        <Route path="your-movie/movie/:id" element={<SingleMovie />} />
         <Route path="*" element={<Error />} />
       </Routes>
       </BrowserRouter>
